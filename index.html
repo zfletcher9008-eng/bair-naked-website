@@ -376,7 +376,7 @@ footer a:hover{color:var(--gold)}
     <div class="ritual">
       <div class="step"><span class="n">i.</span><span class="when">Morning &amp; night</span><h3>Cleanse</h3><p>Start on clean skin, patted almost dry.</p></div>
       <div class="step"><span class="n">ii.</span><span class="when">Morning &amp; night</span><h3>Face Serum</h3><p>Press 2–3 drops of the 1% GHK-Cu serum into face and neck.</p></div>
-      <div class="step"><span class="n">iii.</span><span class="when">Morning &amp; night</span><h3>Seal</h3><p>1–2 pumps of Barrier Cream. At night, the Emu &amp; Tallow cream for extra richness.</p></div>
+      <div class="step"><span class="n">iii.</span><span class="when">Morning &amp; night</span><h3>Seal</h3><p>1–2 pumps of Barrier &amp; Eye Cream, a dab under the eyes. At night, the Emu &amp; Tallow cream for extra richness.</p></div>
       <div class="step"><span class="n">iv.</span><span class="when">Once or twice a week</span><h3>Polish</h3><p>Massage the Sugar Scrub onto damp skin, then rinse.</p></div>
     </div>
   </div>
@@ -391,7 +391,7 @@ footer a:hover{color:var(--gold)}
         <p class="desc">Our three face formulas, made to be layered thin to thick. The 1% GHK-Cu Face Serum and Barrier Cream every morning and night, with the Emu &amp; Tallow Repair Cream sealed on top before bed. A step-by-step card comes in every box.</p>
         <div class="flag-meta">
           <div><b>i.</b><span>1% GHK-Cu Face Serum</span></div>
-          <div><b>ii.</b><span>1% GHK-Cu Barrier Cream</span></div>
+          <div><b>ii.</b><span>1% GHK-Cu Barrier &amp; Eye Cream</span></div>
           <div><b>iii.</b><span>Emu &amp; Tallow Repair Cream</span></div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn-gold js-shop" href="#collection">Shop the Ritual</a><a class="btn btn-line" href="#ritual">How to layer it</a></div>
@@ -464,12 +464,12 @@ const SHOP_URL = '';
 const TIKTOK_URL = '';
 
 const PRODUCTS = [
- {id:'barrier',name:'1% GHK-Cu Barrier Cream',vessel:'airless',sap:true,tag:'Copper peptide · 1%',size:'1.7 oz · 48 g · tall matte black airless pump',
+ {id:'barrier',name:'1% GHK-Cu Barrier & Eye Cream',vessel:'airless',sap:true,tag:'Copper peptide · 1%',size:'1.7 oz · 48 g · tall matte black airless pump',
   cats:['copper','tallow','ff'],
-  desc:'Our signature. A full 1% copper peptide in a cushiony cream of tallow, squalane and jojoba that seals in moisture and helps skin look firmer and smoother.',
-  keys:['GHK-Cu 1%','Squalane','Tallow','Panthenol','Hyaluronic acid'],
-  use:'1–2 pumps on clean skin, morning and night. Do not layer with vitamin C.',
-  inci:'Water (Aqua), Tallow, Squalane, Cetearyl Alcohol, Simmondsia Chinensis (Jojoba) Seed Oil, Glycerin, Panthenol, Polysorbate 60, Copper Tripeptide-1, Cetyl Alcohol, Phenoxyethanol, Tocopherol, Allantoin, Caprylyl Glycol, Sodium Hyaluronate, Sorbic Acid.'},
+  desc:'Our signature, now for face and eyes. A full 1% copper peptide plus 1% caffeine in a cushiony cream of tallow, squalane and jojoba that seals in moisture, helps skin look firmer and smoother, and reduces the look of under-eye puffiness.',
+  keys:['GHK-Cu 1%','Caffeine 1%','Squalane','Tallow','Panthenol','Hyaluronic acid'],
+  use:'Face: 1–2 pumps on clean skin, morning and night. Eyes: a rice-grain amount patted around the orbital bone; keep out of the eyes. Do not layer with vitamin C.',
+  inci:'Water (Aqua), Tallow, Squalane, Cetearyl Alcohol, Simmondsia Chinensis (Jojoba) Seed Oil, Glycerin, Panthenol, Caffeine, Copper Tripeptide-1, Polysorbate 60, Phenoxyethanol, Cetyl Alcohol, Tocopherol, Allantoin, Caprylyl Glycol, Sodium Hyaluronate, Sorbic Acid.'},
  {id:'serum',name:'1% GHK-Cu Face Serum',vessel:'dropper',sap:true,tag:'Copper peptide · 1%',size:'1 fl oz · 30 mL · matte black dropper',
   cats:['copper','ff'],
   desc:'A weightless water serum with 1% copper peptide, caffeine, panthenol and hyaluronic acid. Absorbs in seconds and leaves skin smooth and ready for cream.',
@@ -535,7 +535,7 @@ function defs(){
   <filter id="matteTex${i}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="2.4" numOctaves="1" seed="${i}" result="n"/><feColorMatrix type="saturate" values="0" in="n" result="g"/><feComponentTransfer in="g" result="a"><feFuncA type="linear" slope=".022"/></feComponentTransfer><feComposite in="a" in2="SourceGraphic" operator="in" result="t"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="t"/></feMerge></filter>
   </defs>`};
 }
-const SHORT={barrier:['Barrier Cream','1% GHK-CU'],serum:['Face Serum','1% GHK-CU'],emu:['Emu & Tallow','REPAIR CREAM'],vanilla:['Whipped Lotion','TALLOW · JOJOBA'],scrub:['Sugar Scrub','TALLOW · JOJOBA'],scalp:['Scalp Mist','GHK-CU · AHK-CU']};
+const SHORT={barrier:['Barrier & Eye Cream','1% GHK-CU'],serum:['Face Serum','1% GHK-CU'],emu:['Emu & Tallow','REPAIR CREAM'],vanilla:['Whipped Lotion','TALLOW · JOJOBA'],scrub:['Sugar Scrub','TALLOW · JOJOBA'],scalp:['Scalp Mist','GHK-CU · AHK-CU']};
 /* printed mark on matte black: sapphire logo + name, no paper label */
 function print(i,cx,y,w,name,sub){
   const lh=w*486/800;
